@@ -1,0 +1,113 @@
+UDD
+
+User Driven Development. 
+
+Internetlivestats.com stated on September 2014 that we exceeded 1 billion websites. 
+
+ A research from microsoft done in 2006, over 1.04 billion of html pages, found an average of 62 
+
+links per page.
+
+How many times in the world, for every of those websites a customer asked for a certain link, 
+
+changed something on the text of the link, or found that a link is not working. For every of those 62 
+
+links of every pages of every one of those 1 billion of websites a developer or a webdesigner had to 
+
+write <a href=””>..... The same for every title of the website, menu, javascript code, jquery plugin, 
+
+autosuggestion, etc, etc, etc, etc, etc. This is too redundant and dramatically increase entropy, 
+
+slow down the creative process whereas every one who's willing to build a technological product 
+
+depends on a technical guy that will, the whole live build the same functionality(links, titles, pages) 
+
+again and again in the same way, making small changes.
+
+Today, it's possible to describe software functionalities on a Business Readable Domain Specific 
+
+Language which is just natural human language with a few rules. This code can be understood by 
+
+technical guys, and business guys.
+
+This is BDD(behat.com, cuckes.info, etc). We start by describing the behaviour of our software in a 
+
+way that can be analyzed by BDD Test Suites that will determine if the software conforms(input → 
+
+output as perceived by the actor) to specifications, then we build the software until it conform to the 
+
+specification.
+
+UDD, just says that, as we can describe a problem in a standard way so that a software can 
+
+understand if the specifications are met or not, in the same way we can build a software which 
+
+automatically reconduce those specifications(set of steps) to a set of functionalities built by 
+
+developers. The way primitived functionalities in a software are tied togheter will not be concern 
+
+of developers, but will reflect automatically the natural language description of the product. Every 
+
+future change to the execution flow, will not concern in any way a develoer, but just the change of 
+
+the description of the problem, the solution will then be automatically built. 
+
+In the future Functional Frameworks will born, Able to build every kind of standard functionalities, 
+
+that will be able to “build” steps like those:
+
+When I Click “home”
+
+Then I shuold see the homepage
+
+into: <a href=”index.php”>home</a>
+
+if we set html as implementation or in $('div.home').click({function() .........} if we set jquery as 
+
+implementation.
+
+But also more complicated functionalities, as group of primitive functionalities. Software 
+
+description so, will be really indipendent from the programming language. It will be enough to 
+
+change on the config file something like “implementation: ruby” to “implementation:python” to 
+
+have a new program.
+
+Developers will just have to concentrate on new non standard never implemented functionalities 
+
+and finally User Experience Experts will be able to actively develop solutions, and not just describe 
+
+what is right and what is not to developers, and hope that they understood.
+
+That's all, wellcome to the future
+
+UDD - User Driven Development defines:
+
+(in cronological order)
+
+1. Product as a set of scenarios that must be tested functionally(BDD)
+
+ =>
+
+2. A scenario is described on a Business Readable Domain Specific Language(i.e. Gherkin) as a set 
+
+of steps(i.e. Given, When, Then).
+
+3. Every step will be automatically asociated to a primitive functionality of the software
+
+ =>
+
+3. Primitive operations should be testable as units(TDD)
+
+ 
+
+4. and then built.
+
+The primitive operations, or methods and classes will be developed indipendently from the 
+
+execution flow of the product, furthermore, should be developed without knowing the product.
+
+The developer, as in an SAAS architecture, knows, what input should receive, and what output 
+
+should produce, nothing less nothing more.
